@@ -14,7 +14,7 @@
 
 
 # 👨‍💻 Taberna
-![taberna](https://ik.imagekit.io/cvl9jqbo47c/logo_UUlDrMS1T.png)
+![taberna](https://ik.imagekit.io/cvl9jqbo47c/Chanut-Role-Playing-Viking_83OLZtkCv.ico)
 
  Taberna é uma plataforma de disponibilidade de dados sobre, lan-houses, gamer houses, mundo geeek, material para estudo e etc.
  
