@@ -12,6 +12,6 @@
 # :computer: Taberna
 ![taberna](https://ik.imagekit.io/cvl9jqbo47c/Chanut-Role-Playing-Viking_83OLZtkCv.ico)
 
- Taberna é uma plataforma de disponibilidade de dados, sobre lan-houses, gamerhousesm mundo geeek, material para estudo e etc, com o intuito de disponibilizar lazer a comunidades mais afastadas do centro da cidade.
+ Taberna é uma plataforma de disponibilidade de dados sobre, lan-houses, gamer houses, mundo geeek, material para estudo e etc.
  
- Nesse maravilhoso mundo da tecnologia sempre ficamos bem ansiosos para estudar, aprender novas skils, jogar os jogos do momento(ninguém é de ferro), mas nem todos nós possuimos um material para tal. Um computador com configurações básicas não é uma realidade pra muita gente, pensando nisso o Taberna é uma forma de mostrar uma acessibilidade para aqueles que não o possuem, principalmente em periferias mais afastadas do centro da cidade 
+ Nesse maravilhoso mundo da tecnologia sempre ficamos bem ansiosos para estudar, aprender novas skils, jogar os jogos do momento (ninguém é de ferro), mas nem todos nós possuimos um material para tal. Um computador com configurações básicas não é uma realidade pra muita gente, pensando nisso o Taberna é uma forma de mostrar uma acessibilidade para aqueles que não o possuem, principalmente em periferias mais afastadas do centro da cidade 
