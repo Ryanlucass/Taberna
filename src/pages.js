@@ -66,7 +66,7 @@ module.exports = {
             name: fields.name,
             about: fields.about,
             whatsapp: fields.whatsapp,
-            imagens: fields.images.toString(),
+            images: fields.images.toString(),
             instructions: fields.instructions,
             opening_hours: fields.opening_hours,
             open_on_weekends: fields.open_on_weekends,
