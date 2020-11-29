@@ -42,4 +42,6 @@
 - [x] **JavaScript**
 
 - [x] **CSS**
+
+- [x] **SQL**
  
