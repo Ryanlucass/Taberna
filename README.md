@@ -9,12 +9,12 @@
 # Alteração do desafio
  Resolvi alterar o tema do desafio original do NLW, porém, mantendo toda a formatação original. Só tenho a agradecer a todo grupo rocktseat por disponibilizar tantos conteúdos de excelente qualidade, com uma didática maravilhosa e sempre muito atenciosa, em especial ao Mayk Brito pelo excelente trabalho prestado e o maravilhoso carisma e paixão que sempre transparece entre as aulas
 
- [Mayk Brito](https://github.com/maykbrito)
+[Mayk Brito](https://github.com/maykbrito)
 ---
 
 
 # 👨‍💻 Taberna
-![taberna](https://ik.imagekit.io/cvl9jqbo47c/Chanut-Role-Playing-Viking_83OLZtkCv.ico)
+![taberna](https://ik.imagekit.io/cvl9jqbo47c/logo_UUlDrMS1T.png)
 
  Taberna é uma plataforma de disponibilidade de dados sobre, lan-houses, gamer houses, mundo geeek, material para estudo e etc.
  
