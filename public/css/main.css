@@ -1,0 +1,34 @@
+
+        /*MOBILE FIRST*/
+        
+        
+
+
+    * { /*seletor universal*/
+        margin: 0; /*espaçamentos*/
+        padding: 0; /*preenchimentos*/
+        box-sizing: border-box;
+    }
+
+body {
+    color: #a8a8b3;
+    height: 100vh;
+    background: #ebf3f5;
+}
+
+
+:root{
+    font-size: 62.5%;
+}
+
+body, input, botton, textarea {
+    font-size: 1.8rem; /*tamanho da fonte*/
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1;  /*espaçamento*/
+    font-weight: 400;  /*peso da fonte*/
+    
+    font: 400 1.8rem/1 'Nunito', sans-serif;  /*somente agrupando*/
+}
+
+
+

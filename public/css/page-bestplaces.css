@@ -1,0 +1,117 @@
+#page-bestplaces{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+/*Aquela barra lateral, defifindo o seu tamanho*/
+
+aside{
+width: clamp(24rem, 25vw, 44rem);/*Ajustando o rem, para mobile*/
+background:linear-gradient(329.54deg,#121214 0%, #0F103C 100%);
+padding: clamp(3rem, 5vw, 8rem);
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+} 
+
+aside h2{
+    margin-top: 2.4rem;
+
+    font: 800 clamp(2rem, 365rem)/1.1 'Roboto', sans-serif;
+
+}
+
+aside p{
+    margin-top: 2.4rem;
+    /* font: 400 1.6rem/1.1 'Roboto', sans-serif; */
+}    
+
+aside footer p{
+    margin-top:.8rem;
+}
+ 
+#mapid{
+    width: 100%;
+    height: 100%;
+
+    
+    animation-delay: 2seg;
+}
+
+
+
+
+/*Button*/
+
+a.create-bestplace{
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+
+    z-index: 500;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    background:#0d975e;
+    border: 0;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    transition: background-color 200ms; 
+}
+
+a.create-bestplace:hover{/*Estado mofidicado, quando passar o mouse ele vai sair daquele estado e irá mudar a cor do background*/
+    background:#1fe783;
+
+}
+
+.leaflet-popup-content-weapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+/* fonte */
+.leaflet-popup-content{
+    color:#0d975e;
+    margin: .8rem 1.2rem;
+    /* font: 600 2rem/1 'Roboto', sans-serif; */
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+/* botom */
+.leaflet-popup-content a{
+    width: 4rem;
+    height: 4rem;
+    background-color: #0d975e;
+    box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);
+    border-radius: 12px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s;
+
+}
+.leaflet-popup-content a:hover{
+    background:#0cd17f;
+}
+.leaflet-popup-tip{
+    display: none;
+}
+.leaflet-container{
+    font: 600 2rem/1 'Roboto', sans-serif;
+    z-index: 5;
+}
+
+ 
+

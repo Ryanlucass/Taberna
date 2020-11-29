@@ -1,0 +1,125 @@
+#page-landing {
+    background:linear-gradient(329.54deg,#121214 0%, #0F103C 100%);
+ 
+    min-height: 100vh;
+    text-align: center;
+    
+    display: flex;
+
+}
+
+#container{ /*configuração do container, tamanho e etc*/
+    margin: auto; 
+
+    width: min(90%, 112rem);
+}
+
+.location, h1, .magic p {
+    height: 16vh;
+}
+
+/*animações de tempo diferentes para cada classe*/
+#logo{
+    animation-delay: 50ms;
+}
+
+.location {
+    animation-delay: 100ms;
+
+}
+
+main h1 {
+    animation-delay: 150ms;
+    font-size: clamp(3rem, 6vw, 8.4rem); /*colocando força no h1 e variando de acordo com o dispositivo, não pode passar do último e o mínimo é o primeiro*/
+}
+
+
+.magic a {
+     /*configuração do botão*/
+     position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+
+    
+    width: 8rem;
+    height: 8rem;
+    background:  #0F103C; 
+
+    border: none;
+    border-radius: 3rem; /*arredodando as bordas*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin:initial;
+
+    transition: background 0.2s;
+    
+    
+}
+
+.magic a:hover { /*Procura na classe magic, quando o mouse tiver em cima dele. fazer isso*/
+background:  #a8a8b3;
+ 
+}
+ 
+
+.magic p {
+    animation-delay: 200ms;
+} 
+
+.magic a{
+    animation-delay: 250ms;
+}
+
+
+/* Desktop version */
+@media (min-width: 760px) { /*só vai aplicar essa estilização quando o mínimo de largua for atingido*/ 
+
+    #container{
+    padding: 5rem, 2rem;
+    background: url("../image/gamerhouse.png")no-repeat 80% / clamp(30rem, 54vw, 56rem);
+    /*background-position: 80%;*/
+    
+    } 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.location, h1, .magic p {
+    height: initial;
+    text-align: initial;
+}
+
+.location{
+    text-align: right; /*alinhando a linha para o lado direito*/
+    font-size: 2.4rem;
+    line-height: 1.5;
+    }
+
+
+
+main h1{
+    font-weight: bold; /*Negrito*/  
+    line-height: .88;
+    
+    margin: clamp(10%, 9vw, 12%)0 4rem;
+    
+    width:min(500px, 90%);
+    }
+
+.magic{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.magic p{
+    font-size: 2.4rem;
+    line-height: 1.8;
+    width: clamp(20rem, 20vw, 30rem);
+    }
+
+}      

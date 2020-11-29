@@ -1,0 +1,20 @@
+{
+  "name": "taberna2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gcc": "^1.0.2",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.6",
+    "sqlite-async": "^1.1.0",
+    "sqlite3": "^5.0.0"
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar uma Gamehouse | Taberna</title>
+
+    <!-- <link do mapa CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- link do mapa js -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <!-- <link rel="stylesheet" href="/scripts/page-bestplaces.js"/> -->
+
+    <!-- meu main que puxa dos dois arquivos -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- minha page principal desse arquivo -->
+    <link rel="stylesheet" href="/css/page-create-gamerhouse.css" />
+    <!-- animação da página     -->
+    <link rel="stylesheet" href="/css/animation.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+
+    <!-- icone da página -->
+    <link
+      rel="shortcut icon"
+      href="/image/Chanut-Role-Playing-Viking.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Minha fonte do google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css do mapa -->
+    <link rel="stylesheet" href="/css/map.css" />
+    <!-- css do formulário -->
+    <link rel="stylesheet" href="/css/forms.css" />
+    <!-- css dos botões-->
+    <link rel="stylesheet" href="/css/buttons.css" />
+  
+  </head>
+
+  <body>
+    <!--Barra lateral (left)-->
+    <div id="create-gamerhouse">
+      <aside class="animate-right sidebar">
+        <img
+          src="/image/gameteam.png"
+          alt="taberna digital"
+          width="100"
+          height="100"
+        />
+        <footer>
+          <button onclick="history.back()">
+            <img src="/image/images/arrow-back.svg" alt="Voltar" />
+          </button>
+        </footer>
+      </aside>
+
+      <main class="animate-apper with-sidebar">
+        <form action="save-gamerhouse" method="post" onsubmit="validate(event)">
+          <fieldset>
+            <legend>Dados</legend>
+
+            <div class="map-container">
+              <div id="mapid"></div>
+
+              <input type="hidden" name="lat">
+              <input type="hidden" name="lng">
+
+              <footer>
+                <a href="a" id="select-point">
+                  Clique no mapa para adicionar a localização
+                </a>
+              </footer>
+            </div>
+
+            
+            
+            <div class="input-block">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="about"
+                >Sobre <spam>Máximo de 300 caracteres</spam></label
+              >
+              <textarea id="about" name="about" type="text" required></textarea>
+            </div>
+
+            <div class="input-block">
+              <label for="whatsapp">Número de whatsapp</label>
+              <input id="whatsapp" name="whatsapp" type="number" required/>
+            </div>
+
+            <div class="input-block images">
+              <label for="images">Foto</label>
+
+              <div class="images-upload" id="images">
+                <div class="new-upload"> 
+                  <input
+                   name="images"
+                  placeholder="Cole o link da foto aqui" 
+                  required
+                  type="url"
+                  />
+                  <span onclick="deleteField(event)">
+                    <img src="/image/images/remove-file.svg" alt="Remover Foto">
+                  </span>
+                </div>
+              
+              
+
+              </div>
+              
+              
+              <button onclick="addPhotoField()"
+              type="button">
+                <img
+                  src="/image/images/add-file.svg"
+                  alt="nova imagem"
+                />
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Visitação</legend>
+
+            <div class="input-block">
+              <label for="instructions">Instruções</label>
+              <textarea
+                id="instructions"
+                name="instructions"
+                type="text"
+                required
+              ></textarea>
+            </div>
+
+            <div class="input-block">
+              <label for="opening_hours">Horários de funcionamento </label>
+              <input id="opening_hours" name="opening_hours" type="text" required/>
+            </div>
+
+            <div class="input-block">
+              <label for="open_on_weekends">Atende fins de semana?</label>
+             
+              <input
+                type="hidden"
+                id="open_on_weekends"
+                name="open_on_weekends"
+                value="1"
+                required  
+              />
+               
+              <div class="button-select">
+                <button data-value="1" onclick="toggleSelect(event)" type="button" class="active">Sim</button>
+                <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
+              </div>
+
+              <button type="submit" class="primary-button">
+                Confirmar
+              </button>
+
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+    <script src="/scripts/page-create-gamerhouse.js"></script>
+  </body>
+</html>

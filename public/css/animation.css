@@ -1,0 +1,52 @@
+@keyframes up {
+  /*Animações*/
+  from {
+    /*onde ele vai começar*/
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    /*onnde ele vai termianr*/
+
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Faendo animação*/
+/*saindo do eixo do cambo de visão, até o conteúdo original*/
+
+@keyframes right {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes apper {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-up {
+  animation-name: up;
+  animation-duration: 0.9s;
+  animation-fill-mode: backwards;
+}
+
+.animate-right {
+  animation-name: right;
+  animation-duration: 900ms;
+}
+
+.animate-apper {
+  animation-name: apper;
+  animation-duration: 900ms;
+  animation-fill-mode: backwards;
+}

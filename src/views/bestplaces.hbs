@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localizações | Taberna</title>
+
+
+  <!-- <link do mapa CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- link do mapa js -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <!-- <link rel="stylesheet" href="/scripts/page-bestplaces.js"/> -->
+
+  <!-- meu main que puxa dos dois arquivos -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <!-- minha page principal desse arquivo -->
+  <link rel="stylesheet" href="/css/page-bestplaces.css" />
+  <!-- animação da página     -->
+  <link rel="stylesheet" href="/css/animation.css" />
+  <!-- sidebar -->
+  <link rel="stylesheet" href="/css/sidebar.css" />
+
+  <!-- icone da página -->
+  <link rel="shortcut icon" href="/image/Chanut-Role-Playing-Viking.ico" type="image/x-icon" />
+
+  <!-- Minha fonte do google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body>
+  <div id="page-bestplaces">
+    <aside class="animate-right">
+      <!--Barra lateral (left)-->
+      <header>
+        <img src="/image/gameteam.png" alt="GameTeam" width="200" />
+
+        <h2>Escolha uma Gamerhouse</h2>
+
+        <p>Um lugar para diversão</p>
+      </header>
+
+      <footer>
+        <!--rodapé-->
+        <strong>Fortaleza</strong>
+        <p>Ceará</p>
+      </footer>
+    </aside>
+
+    <div id="mapid" class="animate-apper">
+
+
+    <div class="bestplaces">
+      {{#each bestplaces}}
+        <span hidden 
+        data-id="{{this.id}}"
+        data-name="{{this.name}}"
+        data-lat="{{this.lat}}"
+        data-lng="{{this.lng}}"
+        ></span>
+
+      {{/each}}
+
+    </div>
+     
+
+      <a href="/create-gamerhouse" class="create-bestplace" title="cadastre uma GameHouse">
+        <img src="/image/Add-icon.png" alt="criar GameHouse" width="50" /></a>
+    </div>
+  </div>
+
+  <script src="/scripts/page-bestplaces.js"> </script>
+
+</body>
+
+</html>

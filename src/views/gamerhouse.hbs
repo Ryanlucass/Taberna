@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{gamerhouse.name}} | taberna </title>
+
+  <!-- <link do mapa CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- link do mapa js -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <!-- <link rel="stylesheet" href="/scripts/page-bestplaces.js"/> -->
+
+  <!-- meu main que puxa dos dois arquivos -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <!-- minha page principal desse arquivo -->
+  <link rel="stylesheet" href="/css/page-gamerhouse.css" />
+  <!-- animação da página     -->
+  <link rel="stylesheet" href="/css/animation.css" />
+  <!-- sidebar -->
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <!-- icone da página -->
+  <link rel="shortcut icon" href="/image/Chanut-Role-Playing-Viking.ico" type="image/x-icon" />
+  <!-- Minha fonte do google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+    rel="stylesheet" />
+  <!-- css do mapa -->
+  <link rel="stylesheet" href="/css/map.css">
+  <!-- css dos botões -->
+  <link rel="stylesheet" href="/css/buttons.css" />
+
+
+</head>
+
+<body>
+  <!--Barra lateral (left)-->
+  <div id="page-gamerhouse">
+    <aside class="animate-right sidebar">
+
+      <img src="/image/gameteam.png" alt="taberna digital" width="100" height="100">
+      <footer>
+        <button onclick="history.back()">
+          <img src="/image/images/arrow-back.svg" alt="Voltar">
+        </button>
+      </footer>
+
+    </aside>
+
+    <main class="animate-apper with-sidebar">
+      <div class="gamerhouse-details">
+        <img src="{{gamerhouse.firstImage}}" alt="{{gamerhouse.name}}" width="500" height="250" />
+
+        <div class="images">
+          {{#each gamerhouse.images}}
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="{{this}}" alt="{{gamerhouse.name}}" />
+          </button>
+          {{/each}}
+
+
+
+        </div>
+
+        <div class="GamerHouse-details-content">
+          <h1>{{gamerhouse.name}}</h1>
+
+          <p>{{gamerhouse.about}}</p>
+
+          <div class="map-container">
+            <div id="mapid"></div>
+
+            <span data-lat="{{gamerhouse.lat}}" data-lng="{{gamerhouse.lng}}">
+            </span>
+
+            <footer>
+              <a target="_blank" href="https://maps.google.com/mobile?q={{gamerhouse.lat}},{{gamerhouse.lng}}&z=15">Ver
+                rotas no Google Maps</a>
+            </footer>
+          </div>
+
+          <hr />
+
+          <h2>Instruções para a entrada</h2>
+
+          <p>{{gamerhouse.instructions}}</p>
+
+          <div class="open-details">
+            <div class="hour">
+              <img src="/image/images/clock.svg" alt="horários" />
+              {{gamerhouse.opening_hours}}
+            </div>
+
+            {{#if gamerhouse.open_on_weekends}}
+            <div class="open-on-weekends open">
+              <img src="/image/images/info.svg" alt="Informação" />
+              Atendemos fins de semana
+            </div>
+            {{else}}
+            <div class="open-on-weekends closed">
+              <img src="/image/images/info-red.svg" alt="Informação" />
+              Não atendemos finais de semana
+            </div>
+            {{/if}}
+          </div>
+
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone={{gamerhouse.whatsapp}}&text=oi, quero conversar sobres os horários disponíveis no {{gamerhouse.name}}" target="_blank" class="primary-button"
+            type="button">
+            <img src="/image/images/whatsapp.svg" alt="Chamar no Whatsaap" />
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/scripts/page-gamerhouse.js"></script>
+</body>
+
+</html>
